@@ -1,9 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".TwoStepVerification">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".TwoStepVerification">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<TextView
+    android:id="@+id/phoneNumberLabel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/enter_your_phone_number"
+    android:textColor="@color/colorPrimary"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    android:gravity="center"
+    android:layout_marginTop="24dp"
+    />
+
+
+<TextView
+    android:id="@+id/verifyDescription"
+    android:layout_below="@id/phoneNumberLabel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/whatapp_will_need_to_verify_your_account"
+    android:textColor="@color/black"
+    android:gravity="center"
+    android:textSize="15sp"
+    android:layout_marginTop="15dp"
+    />
+
+<Spinner
+    android:id="@+id/countrySp"
+    android:layout_below="@+id/verifyDescription"
+    android:layout_width="190dp"
+    android:layout_height="40dp"
+    android:layout_marginBottom="5dp"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="15dp"
+    android:gravity="center_horizontal"
+    android:textColorHint="@color/grey"
+    />
+
+<com.google.android.flexbox.FlexboxLayout
+    android:id="@+id/phoneNumberEditText"
+    android:layout_below="@id/countrySp"
+    android:layout_width="match_parent"
+    app:flexDirection="row"
+    android:gravity="center"
+    app:justifyContent="center"
+    android:layout_height="wrap_content">
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Country"
+        android:inputType="phone"
+        android:maxLength="10"
+        android:padding="10dp"
+        />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Phone number"
+        android:inputType="phone"
+        android:maxLength="10"
+        android:padding="10dp"
+        />
+</com.google.android.flexbox.FlexboxLayout>
+
+
+
+
+<Button
+    android:id="@+id/continueButton"
+    android:layout_below="@id/phoneNumberEditText"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="20dp"
+    android:gravity="center"
+    android:text="Continue"
+    android:textColor="#FFFFFF"
+    android:background="@drawable/rectangular_button_bg"
+    />
+
+</RelativeLayout>
+
+

@@ -1,9 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginHorizontal="20dp"
+    android:gravity="center"
     tools:context=".Welcome">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/whatsappbackground"
+        android:scaleType="centerCrop"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_below="@id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_to_whatsapp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/agreeTerms"
+        android:layout_below="@id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/read_our"
+        android:paddingTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        />
+    <Space
+        android:id="@+id/space"
+        android:layout_below="@id/agreeTerms"
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+    <Button
+        android:layout_below="@id/space"
+        android:paddingTop="10dp"
+        android:id="@+id/agreeAndContinueButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/agree_and_continue"
+        android:textColor="#FFFFFF"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:background="@drawable/button_rounded_corners" />
+
+</RelativeLayout>
+

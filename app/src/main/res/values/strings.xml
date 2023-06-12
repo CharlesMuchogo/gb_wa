@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">GB WA</string>
+    <string name="welcome_to_whatsapp">Welcome to WhatApp</string>
+    <string name="read_our">To proceed, please read our Privacy Policy. If you agree to the Terms of Service, tap Agree and Continue.</string>
+    <string name="agree_and_continue">Agree and Continue</string>
+    <string name="enter_your_phone_number">Enter your phone number</string>
+    <string name="whatapp_will_need_to_verify_your_account">Whatapp will need to verify your account</string>
+    <string name="enter_the_code_we_sent_to_your_phone_number">Enter the code we sent to your phone number</string>
+    <string name="skip">Skip</string>
+    <string name="restore">Restore</string>
 </resources>
