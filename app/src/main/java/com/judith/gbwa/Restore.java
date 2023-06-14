@@ -3,8 +3,11 @@ package com.judith.gbwa;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.view.View;
 import android.widget.Button;
 
 public class Restore extends AppCompatActivity {
@@ -20,15 +23,27 @@ private Button skip;
         setContentView(R.layout.activity_restore);
         restore = findViewById(R.id.restore);
         skip = findViewById(R.id.skip);
+        MyAds ads = new MyAds(this);
 
 
         restore.setOnClickListener(view1 -> {
-            startActivity(new Intent(Restore.this, TwoStepVerification.class));
-            finish();
+            ads.ShowInterestialAds();
+            AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+            alertDialog.setView(R.layout.dialog_progress); // Set the custom layout
+
+            AlertDialog dialog = alertDialog.create();
+            dialog.show();
+
+            new Handler().postDelayed(() -> {
+                dialog.dismiss();
+                startActivity(new Intent(Restore.this, TwoStepVerification.class));
+            }, 50000);
         });
+
+
         skip.setOnClickListener(view1 -> {
             startActivity(new Intent(Restore.this, TwoStepVerification.class));
-            finish();
+
         });
     }
 }

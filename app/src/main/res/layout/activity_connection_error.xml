@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:layout_marginHorizontal="20dp"
+android:gravity="center"
+tools:context=".ConnectionError">
+
+
+<TextView
+    android:id="@+id/welcome"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/server_error"
+    android:layout_centerHorizontal="true"
+    android:gravity="center_horizontal"
+    android:textSize="25sp"
+    android:textStyle="bold"
+    />
+
+<TextView
+    android:id="@+id/agreeTerms"
+    android:layout_below="@id/welcome"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/we_could_not_reach_our_servers_please_check_your_connection_and_try_again"
+    android:paddingTop="10dp"
+    android:layout_centerHorizontal="true"
+    android:gravity="center_horizontal"
+    />
+
+
+
+
+</RelativeLayout>
+

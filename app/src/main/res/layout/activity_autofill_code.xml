@@ -30,39 +30,63 @@ tools:context=".AutofillCode">
     app:justifyContent="center"
     android:layout_height="wrap_content">
     <EditText
+        android:id="@+id/et1"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:hint="7"
+        android:hint="*"
         android:inputType="phone"
         android:maxLength="10"
         android:padding="10dp"
         />
 
     <EditText
+        android:id="@+id/et2"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:hint="5"
+        android:hint="*"
         android:inputType="phone"
         android:maxLength="10"
         android:padding="10dp"
         />
     <EditText
+        android:id="@+id/et3"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:hint="8"
+        android:hint="*"
         android:inputType="phone"
         android:maxLength="10"
         android:padding="10dp"
         />
 
     <EditText
+        android:id="@+id/et4"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:hint="2"
+        android:hint="*"
+        android:inputType="phone"
+        android:maxLength="10"
+        android:padding="10dp"
+        />
+    <EditText
+        android:id="@+id/et5"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="*"
+        android:inputType="phone"
+        android:maxLength="10"
+        android:padding="10dp"
+        />
+    <EditText
+        android:id="@+id/et6"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="*"
         android:inputType="phone"
         android:maxLength="10"
         android:padding="10dp"
@@ -84,5 +108,17 @@ tools:context=".AutofillCode">
     android:textColor="#FFFFFF"
     android:background="@drawable/rectangular_button_bg"
     />
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_below="@id/continueButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+    </com.google.android.gms.ads.AdView>
 
 </RelativeLayout>

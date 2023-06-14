@@ -6,8 +6,11 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
@@ -15,9 +18,17 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Locale;
 
+import com.google.android.gms.ads.AdView;
+import com.google.i18n.phonenumbers.PhoneNumberUtil;
+import com.google.i18n.phonenumbers.Phonenumber;
+
 public class VerifyPhoneNumber extends AppCompatActivity {
-    private Spinner countriesList;
     private Button continueButton;
+    private AdView mAdView;
+    private EditText phoneNumber;
+    private PhoneNumberUtil phoneNumberUtil = PhoneNumberUtil.getInstance();
+
+
 
 
     @SuppressLint("MissingInflatedId")
@@ -25,34 +36,18 @@ public class VerifyPhoneNumber extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_verify_phone_number);
-        countriesList = findViewById(R.id.countrySp);
+        MyAds ads = new MyAds(this);
+
         continueButton = findViewById(R.id.continueButton);
+        phoneNumber = findViewById(R.id.phoneNumber);
+        mAdView = findViewById(R.id.adView);
+        ads.ShowBannerAds(mAdView);
 
         continueButton.setOnClickListener(view1 -> {
+            ads.ShowInterestialAds();
             startActivity(new Intent(VerifyPhoneNumber.this, AutofillCode.class));
-            finish();
+
         });
 
-        ArrayList<String> countries = new ArrayList<>();
-        for (Locale locale : Locale.getAvailableLocales()) {
-            if (!TextUtils.isEmpty(locale.getDisplayCountry())) {
-
-                if(!countries.contains(locale.getDisplayCountry())){
-                    countries.add(locale.getDisplayCountry());
-                }
-            }
-        }
-
-        Collections.sort(countries, (country1, country2) -> country1.compareTo(country2));
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(
-                this,
-                android.R.layout.simple_spinner_item,
-                countries
-        );
-
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-        countriesList.setAdapter(adapter);
     }
 }

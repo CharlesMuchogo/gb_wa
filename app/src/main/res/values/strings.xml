@@ -5,7 +5,12 @@
     <string name="agree_and_continue">Agree and Continue</string>
     <string name="enter_your_phone_number">Enter your phone number</string>
     <string name="whatapp_will_need_to_verify_your_account">Whatapp will need to verify your account</string>
-    <string name="enter_the_code_we_sent_to_your_phone_number">Enter the code we sent to your phone number</string>
+    <string name="enter_the_code_we_sent_to_your_phone_number">Waiting to automatically verify with code sent to your phone number</string>
     <string name="skip">Skip</string>
     <string name="restore">Restore</string>
+    <string name="create_a_6_digit_pin_that_you_can_remember">Create a 6-digit PIN that you can remember</string>
+    <string name="two_step_verification">Two-Step Verification</string>
+    <string name="two_step_verification_has_been_turned_on">Two step verification has been turned on</string>
+    <string name="we_could_not_reach_our_servers_please_check_your_connection_and_try_again">We could not reach our servers. Please check your connection and try again</string>
+    <string name="server_error">Server error</string>
 </resources>
