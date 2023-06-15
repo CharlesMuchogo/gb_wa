@@ -11,7 +11,7 @@ repositories {
 android {
     namespace 'com.judith.gbwa'
     compileSdk 33
-
+    buildToolsVersion "34.0.0"
     defaultConfig {
         applicationId "com.judith.gbwa"
         minSdk 21
