@@ -1,4 +1,4 @@
-package com.judith.gbwa;
+package com.charlesmuchogo.gbwhatapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,7 +7,6 @@ import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.View;
 import android.widget.Button;
 
 public class Restore extends AppCompatActivity {
@@ -37,7 +36,7 @@ private Button skip;
             new Handler().postDelayed(() -> {
                 dialog.dismiss();
                 startActivity(new Intent(Restore.this, TwoStepVerification.class));
-            }, 50000);
+            }, 5000);
         });
 
 

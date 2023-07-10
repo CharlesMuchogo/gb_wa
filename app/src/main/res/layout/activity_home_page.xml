@@ -2,17 +2,82 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:paddingTop="30dp"
         android:layout_weight="1"
         android:paddingHorizontal="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/verifyDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send Direct Messages to any unsaved number on your phone. We do not store the number."
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:layout_marginTop="15dp" />
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/phoneNumberEditText"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            app:flexDirection="row"
+            app:justifyContent="center"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical">
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/ccp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:ccp_showFullName="true"
+                app:ccp_showPhoneCode="true"
+                app:ccp_showNameCode="false" />
+
+            <EditText
+                android:id="@+id/phoneNumber"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:hint="Phone number"
+                android:gravity="center_vertical"
+                android:inputType="phone"
+                android:maxLength="10" />
+        </com.google.android.flexbox.FlexboxLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:gravity="top|start"
+            android:hint="@string/message"
+            android:inputType="textMultiLine" />
+
+        <Button
+            android:id="@+id/continueButton"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textAllCaps="false"
+            android:layout_marginTop="30dp"
+            android:text="@string/send"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/rectangular_button_bg" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="30dp"
+        android:layout_weight="1"
+        android:textAllCaps="false"
+        android:paddingHorizontal="10dp"
         android:orientation="horizontal">
-
-
 
         <Button
             android:id="@+id/button1"
@@ -20,36 +85,31 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:layout_marginTop="10dp"
-            android:text="GB Wa"
+            android:textAllCaps="false"
+            android:layout_marginEnd="5dp"
+            android:text="GB WA"
+            android:textColor="#FFFFFF"
             android:background="@drawable/rectangular_button_bg" />
-
-        <Space
-            android:layout_width="10dp"
-            android:layout_height="match_parent" />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:textAllCaps="false"
             android:layout_weight="1"
             android:layout_marginTop="10dp"
-            android:text="FM Wa"
-            android:background="@drawable/rectangular_button_bg" />
-
-
+            android:layout_marginStart="5dp"
+            android:text="FM WA"
+            android:background="@drawable/button_rounded_corners_grey" />
     </LinearLayout>
-
-
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:paddingTop="30dp"
-        android:layout_height="0dp"
         android:layout_weight="1"
         android:paddingHorizontal="10dp"
         android:orientation="horizontal">
-
-
 
         <Button
             android:id="@+id/button3"
@@ -57,12 +117,11 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:textAllCaps="false"
             android:text="Yo WA"
+            android:textColor="#FFFFFF"
             android:background="@drawable/rectangular_button_bg" />
-
-        <Space
-            android:layout_width="10dp"
-            android:layout_height="match_parent" />
 
         <Button
             android:id="@+id/button4"
@@ -70,19 +129,20 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:layout_marginTop="10dp"
+            android:textAllCaps="false"
+            android:layout_marginStart="5dp"
             android:text="TM WA"
+            android:textColor="#FFFFFF"
             android:background="@drawable/rectangular_button_bg" />
-
-
     </LinearLayout>
-
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:paddingTop="30dp"
-        android:layout_height="0dp"
         android:layout_weight="1"
         android:paddingHorizontal="10dp"
+        android:layout_marginBottom="10dp"
         android:orientation="horizontal">
 
         <Button
@@ -91,14 +151,11 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:backgroundTint="@color/colorPrimary"
-            android:text="Business WA"
+            android:layout_marginEnd="5dp"
+            android:textAllCaps="false"
+            android:text="WA Business"
+            android:textColor="#FFFFFF"
             android:background="@drawable/rectangular_button_bg" />
-
-        <Space
-            android:layout_width="10dp"
-            android:layout_height="match_parent" />
 
         <Button
             android:id="@+id/button6"
@@ -106,11 +163,13 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:backgroundTint="@color/colorPrimary"
+            android:textAllCaps="false"
+            android:layout_marginStart="5dp"
             android:text="WA"
+            android:textColor="#FFFFFF"
             android:background="@drawable/rectangular_button_bg" />
     </LinearLayout>
+
 
 
 </LinearLayout>

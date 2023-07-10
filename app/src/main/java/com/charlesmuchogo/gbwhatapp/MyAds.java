@@ -1,4 +1,4 @@
-package com.judith.gbwa;
+package com.charlesmuchogo.gbwhatapp;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,8 +10,6 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.android.gms.ads.interstitial.InterstitialAd;
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 
@@ -27,7 +25,7 @@ public class MyAds {
     public void ShowInterestialAds(){
         MobileAds.initialize(context, initializationStatus -> {});
         AdRequest adRequest = new AdRequest.Builder().build();
-        InterstitialAd.load(context,"ca-app-pub-7568606258610372/1330591402", adRequest,
+        InterstitialAd.load(context,"ca-app-pub-7568606258610372/13305912", adRequest,
                 new InterstitialAdLoadCallback() {
                     @Override
                     public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {

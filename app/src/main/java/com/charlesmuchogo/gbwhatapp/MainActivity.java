@@ -1,4 +1,4 @@
-package com.judith.gbwa;
+package com.charlesmuchogo.gbwhatapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 

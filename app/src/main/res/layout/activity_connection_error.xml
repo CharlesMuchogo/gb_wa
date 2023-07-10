@@ -9,20 +9,17 @@ android:gravity="center"
 tools:context=".ConnectionError">
 
 
-<TextView
-    android:id="@+id/welcome"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="@string/server_error"
-    android:layout_centerHorizontal="true"
-    android:gravity="center_horizontal"
-    android:textSize="25sp"
-    android:textStyle="bold"
-    />
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/animation_view"
+        app:lottie_rawRes="@raw/error"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
 
 <TextView
     android:id="@+id/agreeTerms"
-    android:layout_below="@id/welcome"
+    android:layout_below="@id/animation_view"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="@string/we_could_not_reach_our_servers_please_check_your_connection_and_try_again"

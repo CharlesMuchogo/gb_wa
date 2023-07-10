@@ -1,4 +1,4 @@
-package com.judith.gbwa;
+package com.charlesmuchogo.gbwhatapp;
 
 import org.junit.Test;
 
