@@ -25,7 +25,7 @@ public class MyAds {
     public void ShowInterestialAds(){
         MobileAds.initialize(context, initializationStatus -> {});
         AdRequest adRequest = new AdRequest.Builder().build();
-        InterstitialAd.load(context,"ca-app-pub-7568606258610372/13305912", adRequest,
+        InterstitialAd.load(context,"ca-app-pub-1552117783378081/4847360041", adRequest,
                 new InterstitialAdLoadCallback() {
                     @Override
                     public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {

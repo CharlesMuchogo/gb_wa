@@ -33,7 +33,7 @@
             android:gravity="center_vertical">
 
             <com.hbb20.CountryCodePicker
-                android:id="@+id/ccp"
+                android:id="@+id/countryCode"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 app:ccp_showFullName="true"
@@ -51,15 +51,19 @@
         </com.google.android.flexbox.FlexboxLayout>
 
         <EditText
+            android:id="@+id/messageField"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_marginTop="20dp"
             android:gravity="top|start"
             android:hint="@string/message"
-            android:inputType="textMultiLine" />
+            android:inputType="textMultiLine"
+            android:background="@drawable/edittext_border"
+            android:padding="5dp" />
+
 
         <Button
-            android:id="@+id/continueButton"
+            android:id="@+id/SendMessageBtn"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -73,7 +77,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="30dp"
         android:layout_weight="1"
         android:textAllCaps="false"
         android:paddingHorizontal="10dp"

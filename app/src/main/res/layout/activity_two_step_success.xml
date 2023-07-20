@@ -51,7 +51,7 @@ tools:context=".TwoStepSuccess">
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-7568606258610372/2835244768">
+        ads:adUnitId="ca-app-pub-8026071703536598/7377961092">
     </com.google.android.gms.ads.AdView>
 
 </RelativeLayout>

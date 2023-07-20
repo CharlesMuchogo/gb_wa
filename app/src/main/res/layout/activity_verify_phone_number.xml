@@ -80,10 +80,8 @@
             android:id="@+id/adView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"
             ads:adSize="BANNER"
-            ads:adUnitId="ca-app-pub-7568606258610372/2835244768">
+            ads:adUnitId="ca-app-pub-1552117783378081/4198237753">
         </com.google.android.gms.ads.AdView>
 
     </LinearLayout>
